@@ -112,19 +112,19 @@
 // Nếu dưới 30 cân: “Thừa cân”
 // Còn lại: “Béo quá! Giảm cân đi”
     //code
-        let weight = parseFloat(prompt('Nhập cân nặng của mày vào (kg)'));
-        let height = parseFloat(prompt('Nhập thêm cái chiều cao nữa (met)'));
-        let BMI = weight / (height**2);
-            console.log(BMI);
-        if (BMI < 18) {
-            alert('Thiếu cân rồi đấy, ăn thêm vào');
-        }
-        else if (18 <= BMI && BMI < 25 ) {
-            alert('cơ thể bình thường');
-        }
-        else if (25 <= BMI && BMI < 30) {
-            alert('Thừa cân chút xíu thôi không sao đâu');
-        }
-        else {
-            alert('béo quá rồi đấy! giảm cân nhanh còn kịp');
-        }
+        // let weight = parseFloat(prompt('Nhập cân nặng của mày vào (kg)'));
+        // let height = parseFloat(prompt('Nhập thêm cái chiều cao nữa (met)'));
+        // let BMI = weight / (height**2);
+        //     console.log(BMI);
+        // if (BMI < 18) {
+        //     alert('Thiếu cân rồi đấy, ăn thêm vào');
+        // }
+        // else if (18 <= BMI && BMI < 25 ) {
+        //     alert('cơ thể bình thường');
+        // }
+        // else if (25 <= BMI && BMI < 30) {
+        //     alert('Thừa cân chút xíu thôi không sao đâu');
+        // }
+        // else {
+        //     alert('béo quá rồi đấy! giảm cân nhanh còn kịp');
+        // }
