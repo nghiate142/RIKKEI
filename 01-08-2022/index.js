@@ -116,23 +116,36 @@
 // ----- người dùng nhập vào E thì in ra màn hình thank you
 
 let cart = `vanilla, chocolate, cookies, sting, redbull`;
+let state = true;
 
-let usrInput = prompt('please inpu C/R/U/D/E');
-
+while (state) {
+    let usrInput = prompt('please inpu C/R/U/D/E');
 if(usrInput ==='C'){
-    //Thêm sp mới vào cart = câu lệnh promt
-    //nối chuỗi in ra console string cart= +
-    //in ra console
+                                               
+    let item = prompt('Chọn sản phẩm');             //Thêm sp mới vào cart = câu lệnh promt
+                                                
+    cart = cart + `, ${item}`                       //nối chuỗi in ra console string cart= +
+                                                
+    console.log(cart);                              //in ra console
 }else if(usrInput === 'R'){
-    //B1: in ra conlse string cart
-}else if(usrInput==='C'){
-    //B1:sd câu lệnh prompt() cho ng dùng nhập vào item muốn update
-    //B2: Sử dụng lệnh prompt() cho ng dùng nhập vào item mới
-    //B3: In ra màn hìn console string cart sau update
+                                                
+    console.log(cart)                               //B1: in ra conlse string cart
+}else if(usrInput==='U'){
+                                                
+    let updateItem = prompt('Chọn sản phẩm');       //B1:sd câu lệnh prompt() cho ng dùng nhập vào item muốn update
+                                                
+    let newItem = prompt('Chọn sản phẩm mới');      //B2: Sử dụng lệnh prompt() cho ng dùng nhập vào item mới thay thế cho item trên
+                                                
+    cart = cart.replace(updateItem, newItem);       //B3: tiến hành update và in ra màn hình console string cart sau khi được update
+    console.log(cart)
 }else if(usrInput === 'D'){
-
-    //B1: Sử dụng câu lệnh prompt() cho ng dùng nhập vào item muốn xoá
-    //B2: xáo và in ra string cart sau khi đc xoá
+    let deleteItem = prompt('Nhập item cần xoá');   //B1: Sử dụng câu lệnh prompt() cho ng dùng nhập vào item muốn xoá
+                                                
+    cart = cart.replace(`, ${updateItem}`, '' );    //B2: xáo và in ra string cart sau khi đc xoá
+                                                
+    console.log(cart)
 }else if(usrInput ==='E'){
-    //Dừng ctrinh
+                                                
+    break;                                          //Dừng ctrinh
+}
 }
