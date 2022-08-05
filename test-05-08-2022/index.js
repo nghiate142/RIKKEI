@@ -27,15 +27,18 @@
 // ○ Cho "hello rikkei academy"; In ra "Hello Rikkei Academy”    
        
     //code
-        // let str = prompt('Nhập 1 chuỗi').split(' ');
+        // let str = prompt('Nhập 1 chuỗi').toLowerCase();
         // console.log(str)
-
-        // for (i = 0; i <= str.length; i++) {
-            
-            
-            
+        // let strArr = str.split(' ');
+        // let arr = [];
+        // for (i = 0; i < str.length; i++) {
+        //     let word = strArr[i];
+        //     let letter = word.split('');
+        //     letter[0] = letter[0].toUpperCase();
+        //     word = letter.join(' ');
+        //     arr.push(word);
         // }
-        // console.log(str)
+        // console.log(word)
       
 
 
@@ -50,7 +53,7 @@
 // ve”]; In ra Arr=[“one”,”two”,”three”,”four”,”five”];
 // ○ Cho Arr=[1,2,3,3,4,5,4,4,4,5,5]; In ra Arr=[1,2,3,4,5]
 
-    //code
+    //code1
         // let Arr = ['one','two','three','one','one','four','five','four','five','five'];
         // let a = [];
         // Arr.forEach((c) => {
@@ -61,7 +64,16 @@
         
         // console.log(a);
 
-
+    //code2
+    // let Arr = [1,2,3,3,4,5,4,4,4,5,5];
+    //     let result = [];
+    //     for (let i = 0; i <= Arr.length - 1; i++) {
+    //         let element = Arr[i];
+    //         if (result.indexOf(element) < 0) {
+    //             result.push(element);
+    //         }
+    //     }
+    //     console.log(result);
 
 // Bài 4 : Viết một chương sắp xếp các phần tử là số ở trong 
 // mảng theo thứ tự tăng dần. (1đ)
@@ -76,9 +88,11 @@
     //     let newarr = [];
     //     let str1;
     //     let str2;
-    //     for (let i = 0; i < length.arr; i++) {
+    //     let a = arr.length
+    //     console.log(a)
+    //     for (let i = 0; i < a; i++) {
     //         str1 = Math.min(...arr);
-    //         for (let i = 0; i < length.arr; i++) {
+    //         for (let i = 0; i < a; i++) {
     //             if (str1 === arr[i]) {
     //                 str2 = i;
     //             }
