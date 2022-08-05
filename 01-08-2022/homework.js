@@ -70,10 +70,13 @@
 // EX5: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
     //code
         // let plus
+        // let sum = 0;
         // for (i = 0; i <= 30; i += 1){
         //     if (i % 7 === 0){
         //         // console.log(i)
-        //     plus = ((1 + i) * 30) * 7 / 2;
+        //         sum = sum + i;
+        //         console.log(sum)
+        //     // plus = ((1 + i) * 30) * 7 / 2;
         //     // console.log(plus)
         //     }
         // }
@@ -106,12 +109,12 @@
 
 
 // EX7: Tính giai thừa của một số nguyên dương
-let factorial = parseInt(prompt('Điền một số bất kỳ'));
-    result = 1
-    for (i = 1; i <= factorial; i += 1){
-        result = result * i;
-        // console.log(result)
-    }
-    console.log(result)
+// let factorial = parseInt(prompt('Điền một số bất kỳ'));
+//     result = 1
+//     for (i = 1; i <= factorial; i += 1){
+//         result = result * i;
+//         // console.log(result)
+//     }
+//     console.log(result)
 
     
