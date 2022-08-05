@@ -3,14 +3,14 @@
 // Nếu người dùng nhập "Y", hỏi tiếp tên cầu thủ muốn nhập, sau đó thêm cầu thủ mới vào Array ban đầu và in Array mới ra màn hình
 // Nếu người dùng nhập "N", in ra màn hình câu "Good Bye!"
     //code
-let arr = ['Ronaldo', 'Messi', 'Neymar'];
-let user = prompt(arr + '\n' + 'Điền Y nếu muốn thêm tên cầu thủ. Nếu không điền N ').toLowerCase();
-if(user === 'y'){
-    let Input = prompt('Nhập tên cầu thủ');
-    arr.push(Input);
-    console.log(arr);
-}
-else{
-    console.log('Good Bye')
-}
+// let arr = ['Ronaldo', 'Messi', 'Neymar'];
+// let user = prompt(arr + '\n' + 'Điền Y nếu muốn thêm tên cầu thủ. Nếu không điền N ').toLowerCase();
+// if(user === 'y'){
+//     let Input = prompt('Nhập tên cầu thủ');
+//     arr.push(Input);
+//     console.log(arr);
+// }
+// else{
+//     console.log('Good Bye')
+// }
 
