@@ -70,29 +70,29 @@
 
 
 //2
-    let study = [
-        {
-            id: 1,
-            namestudy: 'HTML',
-            ['Hoan thanh']: 'false',
-        },
-        {
-            id: 2,
-            namestudy: 'CSS',
-            ['Hoan thanh']: 'false',
-        },
-        {
-            id: 3,
-            namestudy: 'JavaScript', 
-            ['Hoan thanh']: 'false',
-        },
-        {
-            id: 4,
-            namestudy: 'Git',
-            ['Hoan thanh']: 'false'
-        }
-    ]
-    console.log(study)
+    // let study = [
+    //     {
+    //         id: 1,
+    //         namestudy: 'HTML',
+    //         ['Hoan thanh']: 'false',
+    //     },
+    //     {
+    //         id: 2,
+    //         namestudy: 'CSS',
+    //         ['Hoan thanh']: 'false',
+    //     },
+    //     {
+    //         id: 3,
+    //         namestudy: 'JavaScript', 
+    //         ['Hoan thanh']: 'false',
+    //     },
+    //     {
+    //         id: 4,
+    //         namestudy: 'Git',
+    //         ['Hoan thanh']: 'false'
+    //     }
+    // ]
+    // console.log(study)
 
     // for (i = 0; i <= study.length; i++){
     //     console.log(`${study[i].id}: ${study[i].namestudy}`)
@@ -102,24 +102,60 @@
 
 
 
-    let crud = prompt('Create, Read, Update, Delete').toLowerCase();
-    if (crud == 'create'){
-    let moreSubjects = prompt('Subject name and enter');
-    for (i = 0; i <= study.length; i++){
-        console.log(`${study[i].id}: ${study[i].namestudy}`)
-        console.log(`Hoan thanh: ${study[i]["Hoan thanh"]}`)
-        console.log('******************')
-    }
+    // let crud = prompt('Create, Read, Update, Delete').toLowerCase();
+    // if (crud == 'create'){
+    // let moreSubjects = prompt('Subject name and enter');
+    // for (i = 0; i <= study.length; i++){
+    //     console.log(`${study[i].id}: ${study[i].namestudy}`)
+    //     console.log(`Hoan thanh: ${study[i]["Hoan thanh"]}`)
+    //     console.log('******************')
+    // }
     
-    }
+    // }
 
-    else if (crud == 'read'){
-        let idSubjects = Number(prompt('Id enter'));
-        for(i = 0; i <= study.length; i++){
-            if (idSubjects == study[i].id){
-                let moreSubjects = prompt('Name study');
-                study[i].namestudy = moreSubjects;
-                console.log(study[i].namestudy)
-            }
-        }
-    }
+    // else if (crud == 'read'){
+    //     let idSubjects = Number(prompt('Id enter'));
+    //     for(i = 0; i <= study.length; i++){
+    //         if (idSubjects == study[i].id){
+    //             let moreSubjects = prompt('Name study');
+    //             study[i].namestudy = moreSubjects;
+    //             console.log(study[i].namestudy)
+    //         }
+    //     }
+    // }
+    // else if(task ==='update'){
+    //     let update = Number(prompt('Enter id update: '));
+    //     let newUpdate = prompt('Enter new content: ');
+    //     study[update].nameStudy = newUpdate;
+    
+    //     for(let i = 0;i<study.length;i++){
+    
+    
+    //         console.log(`${i+1}. ${study[i].nameStudy}`);
+    //         console.log(`Hoàn thành: ${study[i]["Hoàn thành"]}`);
+    //         console.log('-------------');
+    //     }
+    // }else if(task ==='complete'){
+    //         let complete = prompt(`Enter id changer complete task:`);
+           
+    //        study[complete]["Hoàn thành"] = 'true';
+    //         for(let i = 0;i<study.length;i++){
+    
+    
+    //             console.log(`${i+1}. ${study[i].nameStudy}`);
+    //             console.log(`Hoàn thành: ${study[i]["Hoàn thành"]}`);
+    //             console.log('-------------');
+    //         }
+    // }else if(task ==='delete'){
+    //     let del = prompt(`Enter id delete task:`);
+    // delete study[del].nameStudy ;
+    // delete study[del]["Hoàn thành"];
+    
+    // for(let i = 0;i<study.length;i++){
+    
+    
+    //     console.log(`${i+1}. ${study[i].nameStudy}`);
+    //     console.log(`Hoàn thành: ${study[i]["Hoàn thành"]}`);
+    //     console.log('-------------');
+    // }
+    // }
