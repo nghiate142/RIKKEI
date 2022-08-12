@@ -1,0 +1,72 @@
+/* h3 {
+    color: brown;
+    font-size: 200px;
+}
+h2 {
+    color: red;
+} */
+/* h1 {
+    color: rgb(247, 8, 8) !important;
+} */
+
+/* inline(viết trực tiếp vào thẻ html): mức độ ưu tiên cao nhất
+internal(trong thẻ style) và external(file css riêng): như nhau nhưng thằng nào viết sau thì nhận thằng đấy */
+
+/* important: ưu tiên đặc biệt */
+
+/* css selectors: 
+    id: 
+    class:
+    id có thứ tự ưu tiên lớn hơn class */
+    /* css specificity: mức độ ưu tiên của các selector trong css */
+
+
+/* #abcabc {
+    color: blue;
+}
+.abcabc {
+    font-size: 150px;
+} */
+
+
+/* box model */
+/* margin, padding, border, width, height */
+
+/* dấu sao(*) câu lệnh đặt áp dụng cho tất cả thẻ html ban đầu */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: blue;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.box-model{
+    font-size: 100px;
+    background-color: red;
+    color: yellow;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin: 100px;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+
+.inline {
+    display: inline-block;
+    /* block, inline, inline-block; */
+}
+/* color: red; blue;
+color: #000000;
+coler: rgb(red,green,blue) */
+
+/* background-color: */
+
+
+/* font-size: 10px;
+font-weight: bold, bloder,...;
+font-family: */
