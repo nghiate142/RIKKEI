@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+
+#hide-txt {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(100, 145, 145);
+    color: white;
+    text-align: center;
+    line-height: 500px;
+    border-radius: 30px;
+    font-size: 30px;
+    
+}
+.hide{
+    display: none;
+}
