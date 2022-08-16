@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+     /* -top, -bottom, -left, -right 
+    margin-top: ;
+    padding-top: ;
+    border-left: ; 
+}
+
+.blog-container{
+    width: 500px;
+}
+
+.blog-container img {
+    width: 100%;
+}
+
+.blog-container h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.blog-container p {
+    font-weight: 500px;
+} * */
+
+
+/* .alo h1 {
+    font-family: sans-serif;
+    font-size: large ;
+}
+.alo1 {
+    font-family: sans-serif;
+    background-color: rgba(0, 255, 13, 0.301);
+    color: red;
+}
+.alo2 {
+    font-family: sans-serif;
+    background-color: aqua;
+    color: blue;
+    border-left: 5px  solid #dfcb52;
+    border: 5px solid #dfdfdf;
+    
+} */
+
+
+
+.h11 {
+    margin-left: 30px;
+}
+.text1{
+    font-size: 20px;
+    margin-left: 30px;
+}
+.text {
+    color: red;
+}
+
+.table {
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 30px;
+    font-weight: bold;
+    
+}
+.table2 {
+    background-color: bisque;
+    font-size: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.div2 {
+    background-color: white;
+    border-left: 5px solid greenyellow;
+    padding-left: 10px;
+    margin: 30px;
+    font-size: 20px;
+}
+.example {
+    margin-left: 30px;
+}
+.button {
+    background-color: green;
+    color: white;
+    border-radius: 6px;
+    margin-left: 30px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.text42 {
+    color: red;
+}
+.text43 {
+    color: blue;
+}
+.text41 {
+    color: rgb(73, 240, 8);
+}
+
+.button:hover,
+.button:active{
+    background-color: rgb(189, 207, 86);
+}

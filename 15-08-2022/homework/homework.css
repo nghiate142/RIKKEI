@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: aquamarine;
+}
+.container .table-web {
+    display: flex;
+    margin-top: 30px;
+    background-color: aqua;
+}
+.container .h1::after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: orange;
+}
+.left-table {
+    width: 40%;
+}
+.right-table {
+    width: 60%;
+}
+.container .table-web .right-table form .input input {
+    width: 100%;
+}

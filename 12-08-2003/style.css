@@ -39,7 +39,7 @@ internal(trong thẻ style) và external(file css riêng): như nhau nhưng th�
     margin: 0;
     padding: 0;
     color: blue;
-    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
 
 }
 
@@ -53,14 +53,21 @@ internal(trong thẻ style) và external(file css riêng): như nhau nhưng th�
     margin: 100px;
     border: 5px solid black;
     box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    text-transform: lowercase;
+    background: url("../11-08-2022/anh/logo.jpg");
+    background-size: auto ;
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
 }
 
 
-.inline {
-    display: inline-block;
+/* .inline { */
+    /* display: inline-block; */
     /* block, inline, inline-block; */
-}
-/* color: red; blue;
+/* }
+color: red; blue;
 color: #000000;
 coler: rgb(red,green,blue) */
 
@@ -69,4 +76,19 @@ coler: rgb(red,green,blue) */
 
 /* font-size: 10px;
 font-weight: bold, bloder,...;
-font-family: */
+font-family:
+
+
+text 
+text-align: left right center 
+text-transform: lowercase uppercase capitalize
+text-decoration: none
+
+.a {
+    text-decoration: none;
+}
+
+background:url("")
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat; */

@@ -1,0 +1,27 @@
+/* .demo {
+    background-color: pink;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    line-height: 600px;
+    font-size: 40px;
+    color: green;
+    font-weight: bold;
+    border-radius: 50%;
+} */
+
+
+#hide-txt {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(100, 145, 145);
+    color: white;
+    text-align: center;
+    line-height: 500px;
+    border-radius: 30px;
+    font-size: 30px;
+    
+}
+.hide{
+    display: none;
+}
