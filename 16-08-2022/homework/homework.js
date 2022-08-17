@@ -98,7 +98,7 @@ let abc = document.getElementById('btn');
 
 
 
-// EX   
+// EX3
 // abc.onclick = function() {
 //     let tempContent = "";
 //     let bgColorTemp = "";
@@ -117,7 +117,7 @@ let abc = document.getElementById('btn');
 
 
 
-// EX
+// EX4
 // div.style.fontSize = '14px';
 // abc.onclick = function() {
 //     let fontSize = Number(div.style.fontSize.replace ('px', ''));
