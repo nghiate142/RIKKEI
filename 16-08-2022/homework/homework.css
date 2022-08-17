@@ -8,17 +8,28 @@
 
 
 
-#hide-txt {
+#exercise {
     width: 500px;
     height: 500px;
     background-color: rgb(100, 145, 145);
     color: white;
     text-align: center;
     line-height: 500px;
-    border-radius: 30px;
+    border-radius: 50%;
     font-size: 30px;
     
 }
 .hide{
     display: none;
+}
+#exercise2 {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(174, 209, 20);
+    color: rgb(211, 21, 21);
+    text-align: center;
+    line-height: 500px;
+    border-radius: 30px;
+    font-size: 30px;
+    
 }

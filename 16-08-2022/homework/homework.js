@@ -1,7 +1,8 @@
-// let div = document.getElementById('exercise')
-// let abc = document.getElementById('btn');
+let div = document.getElementById('exercise')
+let abc = document.getElementById('btn');
+let div2 = document.getElementById('exercise2')
 // abc.onclick = function() 
-// {
+
     // EX1
     // if(div.style.display != 'none'){
     //     div.style.display = 'none';
@@ -64,12 +65,52 @@
 //   return `#${color}`;
 // }
 // https://codepen.io/Mdvlprr/pen/ygYKMj
-let btn = document.getElementById("btn");
-let div = document.getElementById("hide-txt");
-let color =['orange', 'yellow', 'blue','green','violet'];
+// let btn = document.getElementById("btn");
+// let div = document.getElementById("exercise");
+// let color =['orange', 'yellow', 'blue','green','violet'];
 
-btn.onclick=function(){
+// btn.onclick=function(){
 
-    div.style.backgroundColor= color [Math.floor(Math.random()*color.length) ];
+//     div.style.backgroundColor= color [Math.floor(Math.random()*color.length) ];
  
+// }
+
+// abc.onclick =function () {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     let color = `rgb(${r}, ${g}, ${b})`;
+//     div.style.backgroundColor = color;
+//     console.log(r, g, b);
+// };
+
+// abc.onclick = function () {
+//     let color = generateColor();
+//     div.style.backgroundColor = color;
+// }
+// function generateColor () {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     let color = `rgb(${r}, ${g}, ${b})`;
+//     return color
+// }
+
+
+
+// EX3:     
+abc.onclick = function() {
+    let tempContent = "";
+    let bgColorTemp = "";
+
+    let style = getComputedStyle(div);
+    let style2 = getComputedStyle(div2);
+
+    bgColorTemp = style.backgroundColor;
+    div.style.backgroundColor = style2.backgroundColor;
+    div2.style.backgroundColor = bgColorTemp;
+
+    tempContent = div.innerHTML;
+    div.innerHTML = div2.innerHTML;
+    div2.innerHTML = tempContent
 }
