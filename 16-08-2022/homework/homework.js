@@ -98,7 +98,7 @@ let abc = document.getElementById('btn');
 
 
 
-// EX3:     
+// EX   
 // abc.onclick = function() {
 //     let tempContent = "";
 //     let bgColorTemp = "";
@@ -115,9 +115,12 @@ let abc = document.getElementById('btn');
 //     div2.innerHTML = tempContent
 // }
 
-div.style.fontSize = '14px';
-abc.onclick = function() {
-    let fontSize = Number(div.style.fontSize.replace ('px', ''));
-    fontSize = fontSize + 1;
-    div.style.fontSize = fontSize + 'px';
-}
+
+
+// EX
+// div.style.fontSize = '14px';
+// abc.onclick = function() {
+//     let fontSize = Number(div.style.fontSize.replace ('px', ''));
+//     fontSize = fontSize + 1;
+//     div.style.fontSize = fontSize + 'px';
+// }
