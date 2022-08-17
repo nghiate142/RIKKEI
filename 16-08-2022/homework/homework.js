@@ -1,6 +1,6 @@
 let div = document.getElementById('exercise')
 let abc = document.getElementById('btn');
-let div2 = document.getElementById('exercise2')
+// let div2 = document.getElementById('exercise2')
 // abc.onclick = function() 
 
     // EX1
@@ -99,18 +99,25 @@ let div2 = document.getElementById('exercise2')
 
 
 // EX3:     
+// abc.onclick = function() {
+//     let tempContent = "";
+//     let bgColorTemp = "";
+
+//     let style = getComputedStyle(div);
+//     let style2 = getComputedStyle(div2);
+
+//     bgColorTemp = style.backgroundColor;
+//     div.style.backgroundColor = style2.backgroundColor;
+//     div2.style.backgroundColor = bgColorTemp;
+
+//     tempContent = div.innerHTML;
+//     div.innerHTML = div2.innerHTML;
+//     div2.innerHTML = tempContent
+// }
+
+div.style.fontSize = '14px';
 abc.onclick = function() {
-    let tempContent = "";
-    let bgColorTemp = "";
-
-    let style = getComputedStyle(div);
-    let style2 = getComputedStyle(div2);
-
-    bgColorTemp = style.backgroundColor;
-    div.style.backgroundColor = style2.backgroundColor;
-    div2.style.backgroundColor = bgColorTemp;
-
-    tempContent = div.innerHTML;
-    div.innerHTML = div2.innerHTML;
-    div2.innerHTML = tempContent
+    let fontSize = Number(div.style.fontSize.replace ('px', ''));
+    fontSize = fontSize + 1;
+    div.style.fontSize = fontSize + 'px';
 }
