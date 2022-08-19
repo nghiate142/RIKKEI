@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
 /* .demo {
     background-color: pink;
     width: 600px;
@@ -24,4 +32,82 @@
 }
 .hide{
     display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin: auto;
+    margin: 20px;
+}
+.container #input {
+    width: 70%;
+    border: 1px solid rgb(100, 145, 145);
+   
+}
+.container #btn{
+    width: 100px;
+    border: 1px solid rgb(100, 145, 145);
+    width: 60px;
+    height: 30px;
+}
+.update-content{
+    display: none;
+}
+.container #update-content{
+    width: 100px;
+    border: 1px solid rgb(100, 145, 145);
+    width: 60px;
+    height: 30px;
+}
+
+#list {
+    width: 400px;
+    margin: auto;
+    border:  1px solid rgb(100, 145, 145);
+    margin-top: 20px;
+    list-style: none;
+}
+#list .list-item:nth-child(2n){
+    background-color: rgb(184, 63, 148);
+}
+#list .list-item{
+    list-style: none;
+    border-bottom: 1px solid rgb(100, 145, 145);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: azure;
+    transition: 0.5s;
+}
+
+
+
+.delete-btn {
+    padding: 5px 5px;
+    border: none;
+    color: rgb(139, 50, 105);
+    transition: 0.4s;
+    border-radius: 30%;
+}
+.update-btn {
+    padding: 5px 5px;
+    color: rgb(173, 184, 27);
+    border: none;
+    transition: 0.5s;
+    border-radius: 100%;
+}
+.update-btn:hover {
+    background-color: rgb(19, 22, 177);
+}
+.delete-btn:hover {
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    background-color: rgb(190, 206, 120) !important;
 }
