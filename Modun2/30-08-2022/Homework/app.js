@@ -1,4 +1,3 @@
-
 //6
 
 // a= 2;//undefine
@@ -30,7 +29,7 @@
 // console.log(2);
 // }//err foo chua duoc goi
 
-//10. Không chạy đoạn code sau, 
+//10. Không chạy đoạn code sau,
 //phán đoán output của các câu lệnh console.log() var foo();
 // function foo() {
 //     console.log(1);
@@ -38,7 +37,7 @@
 //     foo = function() {
 //     console.log(2);//2
 //     }
-    
+
 //     foo();
 
 //11 Viết 1 chương trình xóa đi n phần tử cuối cùng của 1 array
@@ -55,47 +54,54 @@
 // let arr = ['1', '2', '3', '4', '5'];
 // let n = prompt();
 // function first(arr, n) {
-//   arr.length = n;
-//   return arr;
+// //   arr.length = n;
+// //   return arr;
+// C2
+// return arr.splice(n, arr.length - n);
 //   }
 //   console.log(first(arr, n));
-  
-//13. Cho một mảng
-// const users = [
-// {
-// name: "Angelina Jolie",
-// age: 80
-// },
-// {
-// name: "Eric Jones",
-// age: 2
-// },
-// {
-// name: "Paris Hilton",
-// age: 5
-// },
-// {
-// name: "Kayne West",
-// age: 16
-// },
-// {
-// name: "Bob Ziroll",
 
-// age: 100
-// }
-// ]
+//13. Cho một mảng
+const users = [
+  {
+    name: "Angelina Jolie",
+    age: 80,
+  },
+  {
+    name: "Eric Jones",
+    age: 2,
+  },
+  {
+    name: "Paris Hilton",
+    age: 5,
+  },
+  {
+    name: "Kayne West",
+    age: 16,
+  },
+  {
+    name: "Bob Ziroll",
+
+    age: 100,
+  },
+];
 
 // let inputUsr = users.map(function(user){
 
 //     return   `<h1> ${user.name} </h1>
-            
-//                 <h2> ${user.age}</h2>`
 
+//                 <h2> ${user.age}</h2>`
 
 // });
 
 // document.write(inputUsr);
-
+// C2
+// let result = users.map(function(e,i){
+//     e.name = `<h1>${e.name}</h1>`,
+//     e.age = `<h2>${e.age}</h2>`
+//     return e
+// })
+// console.log(result);
 
 // 14 let usrInput = users.map(function(user){
 
@@ -119,22 +125,29 @@
 //     return (num * 3) * triple(n);
 // })
 // console.log(newArr);
+// C2
+// function triple(num){
+//     return num * 3
+// }
+// function multiply(arr){
+//     return arr.map(triple)
+// }
+// console.log([1,2,3,4,5,6]);
 
-// 16. Sử dụng hàm filter của array. Viết một hàm nhận vào 
-//một mảng số ngẫu nhiên, hàm đó trả về 
+// 16. Sử dụng hàm filter của array. Viết một hàm nhận vào
+//một mảng số ngẫu nhiên, hàm đó trả về
 //một mảng mới chỉ chứa các phần tử lớn hơn 5
 
-// let array = [1,2,3,4,5,6,7,8,9,0,10,11,21];
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11, 21];
 
-// let filterArray = array.filter(function(arr){
-
-//    return arr > 5;
-// })
+// let filterArray = array.filter(function (arr) {
+//   return arr > 5;
+// });
 
 // console.log(filterArray);
 //21 Viết một hàm nhận vào một mảng 2 chiều,
 // sử dụng phương thức reduce và trả về một mảng một chiều chứa toàn bộ
-// những phần tử con trong các mảng con 
+// những phần tử con trong các mảng con
 
 //reduce tra ve 1 gia tri duy nhat
 
@@ -150,40 +163,63 @@
 // let arr = flatternArr.reduce(function(array,index){
 
 //    return array.concat(index);
-   
 
 // }, [])
 // console.log(arr)
 
-//20 Viết một hàm nhận vào một mảng ngẫu nhiên. 
-//Sử dụng phương thức reduce củaarray, 
+//20 Viết một hàm nhận vào một mảng ngẫu nhiên.
+//Sử dụng phương thức reduce của array,
 //trả về object mới với các phần tử trong mảng là key,
 // và value sẽ là số lần xuất hiện của chúng ở trong mảng
 
+//17 Cho mảng sau
+// var members = [
+//   { name: "Lan", gender: "female" },
+//   { name: "Linh", gender: "female" },
+//   { name: "Trung", gender: "male" },
+//   { name: "Peter", gender: "gay" },
+// ];
+//    // Viết một hàm nhận đầu vào là mảng trên,
+//    //sử dụng phương thức filter của array,
+//    //trả về một mảng mới chỉ chữa những phần tử object có gender là female
 
+// let filterMembers = members.filter(function (member, index, array) {
+//   let ouput = [];
+//   if (member.gender === "male" || member.gender === "female") {
+//     ouput.push(member.gender);
 
-//17 Cho mảng sau 
-// var members = [ 
-//     { name: 'Lan', gender: 'female' }, 
-//     { name: 'Linh', gender: 'female' }, 
-//     { name: 'Trung', gender: 'male' }, 
-//     { name: 'Peter', gender: 'gay' } 
-//     ]; 
-//    // Viết một hàm nhận đầu vào là mảng trên, 
-//    //sử dụng phương thức filter của array, 
-//    //trả về một mảng mới chỉ chữa những phần tử object có gender là female 
-   
-  
-// let filterMembers = members.filter(function(member,index,array){
-
-//    let ouput = [];
-// if(member.gender==='male' || member.gender==='female'){
-
-//    ouput.push(member.gender);
-
-//    return ouput
-  
-// }
+//     return ouput;
+//   }
 // });
-
 // console.log(filterMembers);
+
+// C2
+// function filterMember(arr) {
+//   return arr.filter(function (e, i) {
+//     return e.gender === "female";
+//   });
+// }
+// console.log(filterMember(members));
+
+//18 Viết một hàm nhận vào một mảng số tự nhiên,
+// sử dụng find method của array trả về số chẵn đầu tiên của mảng đó,
+// nếu không tìm thấy trả về undefined
+//
+// let number = prompt('').split('');
+// const find = number.find(function(number){
+//     return number % 2 === 0;
+// })
+// console.log(find);
+
+//19 Viết một hàm nhận vào 2 tham số, tham số đầu tiên là một mảng số tự nhiên,
+// tham số thứ 2 là số cần chia hết. Sử dụng find method của array,
+// trả về số đầu tiên trong mảng đầu vào chia hết cho tham số thứ 2.
+// Nếu không tìm thấy trả về undefined
+
+// const array = prompt().split('');
+// let x = parseInt(prompt());
+// console.log(array);
+// function findDivisibleNum(array, x) {
+//     return array.find % x === 0;
+//   }
+//   console.log(findDivisibleNum(array,x));
