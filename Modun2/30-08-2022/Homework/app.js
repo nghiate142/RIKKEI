@@ -171,6 +171,30 @@ const users = [
 //Sử dụng phương thức reduce của array,
 //trả về object mới với các phần tử trong mảng là key,
 // và value sẽ là số lần xuất hiện của chúng ở trong mảng
+// C1
+// let arr = ["a", "b", "c", "b", "a", "a"];
+// let result = {};
+// for (let i = 0; i < arr.length; i++) {
+//   let element = arr[i];
+//   if (!result[element]) {
+//     result[element] = 1;
+//   } else {
+//     result[element] = result[element] + 1;
+//   }
+// }
+// console.log(result);
+// C2
+// let arr = ["a", "b", "c", "b", "a", "a"];
+// let arrNew = arr.reduce(function (pre, cur) {
+//   //   console.log(pre, cur);
+//   if (!pre[cur]) {
+//     pre[cur] = 1;
+//   } else {
+//     pre[cur] = pre[cur] + 1;
+//   }
+//   return pre;
+// }, {});
+// console.log(arrNew);
 
 //17 Cho mảng sau
 // var members = [
@@ -216,10 +240,137 @@ const users = [
 // trả về số đầu tiên trong mảng đầu vào chia hết cho tham số thứ 2.
 // Nếu không tìm thấy trả về undefined
 
-// const array = prompt().split('');
+// const array = prompt().split("");
 // let x = parseInt(prompt());
 // console.log(array);
-// function findDivisibleNum(array, x) {
-//     return array.find % x === 0;
+// let result = array.find(function findDivisibleNum(array, x) {
+//   return array % x === 0;
+// });
+// console.log(result);
+
+//21 Viết một hàm nhận vào một mảng 2 chiều, sử dụng phương thức reduce và
+// trả về một mảng một chiều chứa toàn bộ những phần tử con trong các mảng con
+
+// function flatternArray(arr) {
+//   return arr.reduce(function (pre, cur) {
+//     for (let i = 0; i <= cur.length - 1; i = i + 1) {
+//       pre.push(cur[i]);
+//     }
+//     return pre;
+//   }, []);
+// }
+
+// let result = flatternArray([
+//   [1, 2, 3],
+//   [4, 5],
+// ]);
+// console.log(result);
+// C2
+// function flatternArray(arr) {
+//   return arr.reduce(function (pre, cur) {
+//     return pre.concat(cur);
+//   });
+// }
+
+// let result = flatternArray([
+//   [1, 2, 3],
+//   [4, 5],
+// ]);
+// console.log(result);
+// C3
+// function flatternArray(arr) {
+//   return arr.reduce(function (pre, cur) {
+//     return [...pre, ...cur]; // spread operator (array, object)
+//   });
+// }
+
+// let result = flatternArray([
+//   [1, 2, 3],
+//   [4, 5],
+// ]);
+// console.log(result);
+
+//22 Viết một hàm nhận vào một mảng số gồm 2 số.
+// Tính tổng của các số tự nhiên trong khoảng 2 số đó
+
+// function sum(arr) {
+//   let result = 0;
+//   if (arr[0] < arr[1]) {
+//     for (let i = arr[0]; i <= arr[1]; i++) {
+//       result = result + i;
+//     }
+//   } else {
+//     for (let i = arr[1]; i <= arr[0]; i++) {
+//       result = result + i;
+//     }
 //   }
-//   console.log(findDivisibleNum(array,x));
+//   return result;
+// }
+// console.log(sum([1, 4]));
+
+//23 Viết một hàm nhận vào 2 mảng số,
+// so sánh 2 mảng và trả về một mảng mới chứa các phần tử độc nhất giữa 2 mảng.
+// Chú ý sử dụng hàm filter
+
+// function diff(arr1, arr2) {
+//   let result1 = arr1.filter(function (e, i) {
+//     return arr2.indexOf(e) === -1;
+//   });
+//   let result2 = arr2.filter(function (e, i) {
+//     return arr1.indexOf(e) === -1;
+//   });
+//   return result1.concat(result2);
+// }
+// let results = diff([1, 2, 3, 4], [1, 4, 5, 6]);
+// console.log(results);
+
+//24 Viết một hàm nhận vào 1 số n, tính tổng các số lẻ của dãy fibonacci nhỏ hơn số n
+// Lưu ý: Dãy fibonacci bắt đầu từ 1 (1, 1, 2, 3, 5, 8….)
+// function sumFib(n) {
+//   let num1 = 1;
+//   let num2 = 1;
+//   let temp;
+//   let result = [];
+//   for (let i = 1; i <= n; i++) {
+//     if (num1 <= n) {
+//       result.push(num1);
+//     }
+//     temp = num1;
+//     num1 = num2;
+//     num2 = temp + num2;
+//   }
+//   let sum = 0;
+//   for (let e of result) {
+//     if (e % 2 == 1) {
+//       sum = sum + e;
+//     }
+//   }
+//   return sum;
+// }
+// let result = sumFib(99999999999999);
+// console.log(result);
+
+//26 Viết một hàm nhận vào 2 hoặc nhiều mảng,
+// trả về một mảng mới chứa các phần tử không trùng lặp trong các mảng truyền vào
+function flatternArr(arr) {
+  return arr.reduce(function (pre, cur) {
+    return [...pre, ...cur];
+  });
+}
+function uniqueArray() {
+  let result = [];
+  for (let i = 0; i <= arguments.length - 1; i++) {
+    result.push(arguments[i]);
+  }
+  result = flatternArr(result);
+  return result.filter(function (e, i) {
+    return result.indexOf(e) === i;
+  });
+  console.log(result);
+}
+let result = uniqueArray(
+  [1, 2, 3, 4, 5],
+  [1, 5, 4, 4, 63, 45],
+  [1, 4, 5, 6, 2, 6, 7, 4, 75]
+);
+console.log(result);
