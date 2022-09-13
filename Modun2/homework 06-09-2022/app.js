@@ -56,12 +56,11 @@
 
 //Cau3:
 // function foo() {
-//   let arr = [];
 //   var a1 = [2, 4];
 //   var a2 = [6, 8, 10, 12];
-//   arr.push(a1[0], a2[1], a2[2], a2[3]);
-
-//   return arr;
+//   var result = [...a1, ...a2];
+//   result.splice(1, 2);
+//   return foo(result);
 // }
 // function bar() {
 //   return foo();
@@ -72,57 +71,75 @@
 //cau4:
 
 // function ajax(url, cb) {
-//      // fake ajax response:
-//      cb({
-//      foo: 2,
-//      baz: [6, 8, 10],
-//      bam: {
-//      qux: 12
-//      }
-//      });
-//      }
-
-//      function check(data) {
-//      console.log(
-//      56 ===
-//      data.foo +
-//      data.bar +
-//      data.baz[0] +
-//      data.baz[1] +
-//      data.baz[2] +
-//      data.bam.qux +
-//      data.bam.qam
-
-//      );
-//              }
-
-//     var defaults = {
-//     foo: 0,
-//     bar: 4,
+//   // fake ajax response:
+//   cb({
+//     foo: 2,
+//     baz: [6, 8, 10],
 //     bam: {
+//       qux: 12,
+//     },
+//   });
+// }
+
+// function check(data) {
+//   console.log(
+//     56 ===
+//       data.foo +
+//         data.bar +
+//         data.baz[0] +
+//         data.baz[1] +
+//         data.baz[2] +
+//         data.bam.qux +
+//         data.bam.qam
+//   );
+// }
+
+// var defaults = {
+//   foo: 0,
+//   bar: 4,
+//   bam: {
 //     qux: 0,
-//     qam: 14
-//      }
-//      };
+//     qam: 14,
+//   },
+// };
 
-//     // YOUR CODE HERE
-//     function response(...) {
-//     check(...); // true
-//      }
+// // YOUR CODE HERE
+// function response(data) {
+//   // xây data gồm các trường giống trong phần console.log(56 === data...);
+//   // Sử dụng spread operator(...)
+//   let newData = {
+//     ...data,
+//     ...defaults,
+//     foo: 2,
+//     bam: {
+//       qam: 14,
+//       qux: 12,
+//     },
+//   };
+//   console.log(newData);
+//   check(newData); // true
+// }
 
-//     // DO NOT MODIFY
-//     ajax('http://fun.tld', response);
+// // DO NOT MODIFY
+// ajax("http://fun.tld", response);
 
 //cau 5:
 function upper(strings, ...values) {
-  return strings.toUpperCase();
+  const str0 = strings[0];
+  const str1 = strings[1];
+  const str2 = strings[2];
+  const str3 = strings[3];
+
+  const arr = [...values];
+
+  //We can even return a string build using a template literal
+  return `${str0}${arr[0]}${str1}${arr[1]}${str2}${arr[2]}${str3}`;
 }
 var name = "Nguyen Van A",
   account = "ANV",
   classname = "Fresher FrontEnd";
 
 console.log(
-  `Hello ${upper(name)} (@${upper(account)}), welcome to the ${upper(
-    classname
-  )}!!!` === "Hello NGUYEN VAN A (@ANV), welcome to the FRESHER FRONTEND!!!"
+  upper`Hello ${name.toUpperCase()} (@${account}), welcome to the ${classname.toUpperCase()}!!!` ===
+    "Hello NGUYEN VAN A (@ANV), welcome to the FRESHER FRONTEND!!!"
 );
