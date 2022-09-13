@@ -1,57 +1,8 @@
 /** @format */
-//c1
+
 let search = document.querySelector(".query");
 let resultSearch = document.querySelector(".result_search");
 let img = document.querySelector(".img_show");
-// let searchBtn = document.querySelector('input[type="text"]');
-
-// search.onkeydown = (e) => {
-//   if (e.which === 13) {
-//     // let url = "https://www.google.com/search?q=" + query.value;
-//     // window.open(url);
-
-//     let searchStates = async (searchText) => {
-//       let res = await fetch(
-//         `https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&limit=10&format=json&search=` +
-//           search.value
-//       );
-//       let states = await res.json();
-
-//       let result = await fetch(
-//         `https://en.wikipedia.org/w/api.php?
-//    origin=*&action=query&prop=pageprops|pageimages&format=json&titles=` +
-//           search.value
-//       );
-//       let getResult = await result.json();
-//       console.log(states);
-
-//       if (searchText.length === 0) {
-//         states = [];
-//       }
-//     };
-
-//     //Show results
-
-//     //    let outputHtml = getResult=>{
-//     //            if(getResult.length>0){
-//     //                let html = getResult.map(getResult=>{
-//     //                    `<div class="search_list_wrapper">
-//     //                    <div class="search_list">
-//     //                        <div class="img"></div>
-//     //                        <div class="title">
-//     //                            <h3>Lion</h3>
-//     //                       <p>dsahjdklsajks</p>
-
-//     //                        </div>
-//     //                    </div>
-//     //                </div>`
-//     //                });
-//     //                console.log(html);
-//     //             }}
-
-//   }
-// };
-//c2
 
 search.addEventListener("keyup", (e) => {
   function getData(url, fn) {
@@ -119,3 +70,52 @@ search.addEventListener("keyup", (e) => {
     })
   );
 });
+
+// let searchBtn = document.querySelector('input[type="text"]');
+
+// search.onkeydown = (e) => {
+//   if (e.which === 13) {
+//     // let url = "https://www.google.com/search?q=" + query.value;
+//     // window.open(url);
+
+//     let searchStates = async (searchText) => {
+//       let res = await fetch(
+//         `https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&limit=10&format=json&search=` +
+//           search.value
+//       );
+//       let states = await res.json();
+
+//       let result = await fetch(
+//         `https://en.wikipedia.org/w/api.php?
+//    origin=*&action=query&prop=pageprops|pageimages&format=json&titles=` +
+//           search.value
+//       );
+//       let getResult = await result.json();
+//       console.log(states);
+
+//       if (searchText.length === 0) {
+//         states = [];
+//       }
+//     };
+
+//     //Show results
+
+//     //    let outputHtml = getResult=>{
+//     //            if(getResult.length>0){
+//     //                let html = getResult.map(getResult=>{
+//     //                    `<div class="search_list_wrapper">
+//     //                    <div class="search_list">
+//     //                        <div class="img"></div>
+//     //                        <div class="title">
+//     //                            <h3>Lion</h3>
+//     //                       <p>dsahjdklsajks</p>
+
+//     //                        </div>
+//     //                    </div>
+//     //                </div>`
+//     //                });
+//     //                console.log(html);
+//     //             }}
+
+//   }
+// };
