@@ -25,8 +25,9 @@ export var loginPage = /*html*/ `
             id="txt-input"
             type="text"
             placeholder="Please enter your email"
-            required
+            
         />
+        <div id= "erro-email"></div>
 
         <br />
         <br />
@@ -39,9 +40,10 @@ export var loginPage = /*html*/ `
             type="password"
             placeholder="Please enter your password"
             id="pwd"
-            name="password"
-            required
+            
+           
         />
+        <div id= "erro-password"></div>
 
         
 

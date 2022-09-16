@@ -16,4 +16,4 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-setActiveScreen("loginPage");
+setActiveScreen("registerPage");
