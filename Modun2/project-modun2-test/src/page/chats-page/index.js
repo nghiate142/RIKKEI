@@ -15,6 +15,17 @@ export var chatsPage = /*html*/ `
         <div class="chat-type"><input class="input-chat" type="text"
                 placeholder="Type a message..."><button class="send-btn">Send</button></div>
     </div>
+    <div id="mesage-container" class="message-container" >
+        <div class="message-item my-message">
+            <div class="message-content">
+            </div>
+        </div>
+        <div class="message-item other-message">
+            <div class="sender"></div>
+            <div class="message-content">
+            </div>
+        </div>
+    </div>
     <div class="right"></div>
 </div>
 `;

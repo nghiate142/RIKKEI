@@ -22,10 +22,6 @@ export let setActiveScreen = (screenName) => {
           const firtName = loginForm.firtName.value;
           const cpassword = loginForm.cpassword.value;
 
-          console.log(email);
-          console.log(password);
-          console.log(lastName);
-
           // Controller làm nhiệm vụ validate thông tin
           // tạo hàm validateLoginInfo nhận vào email và password trong Controller
           // export hàm validateLoginInfo
@@ -52,4 +48,33 @@ export let renderErrorMessage = (id, text) => {
   if (errorMessage) {
     errorMessage.innerText = text;
   }
+};
+export let addMessage = (messageObject) => {
+  const messageContainer = document.createElement("div");
+  messageContainer.classList.add("message-item");
+
+  const message = document.createElement("div");
+  message.classList.add("message-content");
+  message.innerText = messageObject.content;
+
+  // `<div class="message-item my-message">
+  //   <div class="message-content"></div>
+  // </div>`
+  // `<div class="message-item other-message">
+  //   <div class="sender">Tranminhcuong95@gmail.com</div>
+  //   <div class="message-content"></div>
+  // </div>`;
+
+  if (messageObject.user === authUser.email) {
+    messageContainer.classList.add("my-message");
+  } else {
+    messageContainer.classList.add("other-message");
+    const sender = document.createElement("div");
+    sender.classList.add("sender");
+    sender.innerText = messageObject.user;
+    messageContainer.appendChild(sender);
+  }
+
+  messageContainer.appendChild(message);
+  document.getElementById("message-container").appendChild(messageContainer);
 };

@@ -10,7 +10,10 @@ export var registerPage = /*html*/ `
         <header class="head-form">
         <b>Create new account</b>
         </header>
+        <div id= "success" class="errorAler"></div> 
+        <div class="errorAler" id="server-error-message"></div>
         <div class="field-set">
+        <br/>
         <h4>First Name</h4>
         <input
             name="firtName"
@@ -19,7 +22,7 @@ export var registerPage = /*html*/ `
             placeholder="Please enter your first name"
             
         />
-        <div id= "erro-firtName"></div>
+        <div id= "erro-firtName" class="error"></div>
         <br />
         <br />
         <h4>Last Name</h4>
@@ -30,7 +33,7 @@ export var registerPage = /*html*/ `
             placeholder="Please enter your last name"
             
         />
-        <div id= "erro-lastName"></div>
+        <div id= "erro-lastName" class="error"></div>
         <br />
         <br />
         <h4>Email address</h4>
@@ -41,29 +44,30 @@ export var registerPage = /*html*/ `
             placeholder="Please enter your email"
             
         />
-        <div id= "erro-email"></div>
+        <div id= "erro-email" class="error"></div>
+        
         <br />
         <br />
         <h4> Password</h4>
         <input
             name="password"
             class="form-input"
-            type="text"
+            type="password"
             placeholder="Please enter your Password"
             
         />
-        <div id= "erro-password"></div>
+        <div id= "erro-password" class="error"></div>
         <br />
         <br />
         <h4>Confirm Password</h4>
         <input
             name="cpassword"
             class="form-input"
-            type="text"
+            type="password"
             placeholder="Please enter your Password"
             
         />
-        <div id= "erro-confirmPassword"></div>
+        <div id= "erro-confirmPassword" class="error"></div>
         <br />
         <br />
         <button class="">Register</button>

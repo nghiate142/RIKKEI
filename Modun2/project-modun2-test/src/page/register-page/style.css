@@ -191,3 +191,13 @@ button:hover {
 .field-set{
     width: 100%;
 }
+
+.error {
+    color: red;
+}
+.errorAler{
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+

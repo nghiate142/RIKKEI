@@ -27,7 +27,7 @@ export var loginPage = /*html*/ `
             placeholder="Please enter your email"
             
         />
-        <div id= "erro-email"></div>
+        <div id= "erro-email" class="error"></div>
 
         <br />
         <br />
@@ -43,7 +43,7 @@ export var loginPage = /*html*/ `
             
            
         />
-        <div id= "erro-password"></div>
+        <div id= "erro-password" class="error"></div>
 
         
 
@@ -55,9 +55,9 @@ export var loginPage = /*html*/ `
         <!--   other buttons -->
         <div class="other">
         <!--      Forgot Password button-->
-        <button class="btn submits frgt-pass">Forgot Password</button>
+        <button class="btn submits frgt-pass" id="forgot">Forgot Password</button>
         <!--     Sign Up button -->
-        <button class="btn submits sign-up">
+        <button class="btn submits sign-up" id="signUp">
             Sign Up
             <!--         Sign Up font icon -->
             <i class="fa fa-user-plus" aria-hidden="true"></i>

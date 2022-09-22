@@ -1,5 +1,10 @@
 import { renderErrorMessage } from "../view/index";
-import { createNewUser, LoginUser } from "../model/index";
+import {
+  authUser,
+  createNewUser,
+  LoginUser,
+  saveMessage,
+} from "../model/index";
 export let validateLoginInfo = (
   email,
   password,
@@ -41,5 +46,26 @@ export let validateLoginInfo = (
     );
   } else {
     renderErrorMessage("erro-confirmPassword", "");
+  }
+  if (
+    firtName &&
+    lastName &&
+    email &&
+    password &&
+    cpassword &&
+    cpassword === password
+  ) {
+    createNewUser(firtName, lastName, email, password);
+  }
+};
+
+export let validateChatForm = (content) => {
+  if (content) {
+    let message = {
+      user: authUser.email,
+      content: content,
+      createAt: new Date().toISOString,
+    };
+    saveMessage(message);
   }
 };

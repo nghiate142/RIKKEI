@@ -2,7 +2,7 @@ import "./style.css";
 import img from "./picture/rikkei1.jpg";
 export var resetPasswordPage = /*html*/ `
     <div class="overlay">
-    <form action="">
+    <form id="login-form">
     <div>
         <img src="${img}" alt="" />
     </div>
@@ -21,7 +21,7 @@ export var resetPasswordPage = /*html*/ `
             placeholder="Please enter your email"
             required
         />
-        <div id= "erro-email"></div>
+        <div id= "erro-email" class="error"></div>
         <br />
         <button class="log-in">Reset Password</button>
         </div>
