@@ -1,0 +1,27 @@
+<%- include("./layouts/header", {title: title}) %> 
+    <h1>Hello world</h1>
+    <!-- Biến -->
+
+    <!-- <h2>Hello <%= name %></h2>
+
+    <ul>
+      <li><%= age %></li>
+      <li><%= job %></li>
+    </ul>
+    <% for (let hobby of hobbies) {%>
+    <li><%= hobby %></li>
+    <% } %>
+    
+    <% for (let lover in lovers) {%>
+    <li><%= lover %> - <%= lovers[lover] %></li>
+    <% } %> -->
+    <% if (hobbies.length === 0) { %>
+      <div> Phú has no hobbies at the moment</div>
+    <% } else { %>
+      <h2> Phú has:</h2>
+      <% for (let hobby of hobbies) { %>
+        <div><%= hobby %> </div>
+      <% } %>
+    <% } %>     
+
+<%- include ("./layouts/footer", {title: title}) %> 
