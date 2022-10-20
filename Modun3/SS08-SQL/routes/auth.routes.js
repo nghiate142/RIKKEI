@@ -5,12 +5,12 @@ let userController = require("../controllers/user.controller");
 
 //define routes
 // "/register" --> sử dụng users.controller createUser
-// router.get("/register", authController.renderRegister);
-// router.post("/register", userController.postUser);
+router.get("/register", authController.renderRegister);
+router.post("/register", userController.postUser);
 
 // "/login" --> login Tạo controller cho auth.controller với tên là login thực hiện tìm kiếm trong db xem có user đấy không
 // Nếu không trả về người dùng không tồn tại
-// router.get("/login", authController.renderLogin);
+router.get("/login", authController.renderLogin);
 router.post("/login", authController.login);
 //nếu có --> check pass
 //       --> Nếu đúng trả về res.json({message: "login successfully"}).
